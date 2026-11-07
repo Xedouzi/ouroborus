@@ -187,12 +187,17 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
 .alterna{display:flex;gap:2px;margin-left:auto;padding:3px;border-radius:9px;background:var(--nevoa);flex:none}
 .alterna button{padding:5px 11px;border-radius:7px;font-size:12.5px;font-weight:500;color:var(--apoio);transition:background .2s ease,color .2s ease}
 .alterna button.on{background:var(--acento);color:#fff}
-.nav-palco{background:#E6E3F2;height:clamp(350px,31vw,440px);overflow:hidden}
-.site-mock{container-type:inline-size;width:100%;height:100%;margin:0 auto;background:#fff;transition:width .55s cubic-bezier(.16,1,.3,1)}
+.nav-palco{background:#E6E3F2;height:clamp(390px,31vw,450px);overflow:hidden}
+.site-mock{position:relative;container-type:inline-size;width:100%;height:100%;margin:0 auto;background:#fff;overflow:hidden;transition:width .55s cubic-bezier(.16,1,.3,1)}
+.site-mock.celular{height:calc(100% - 20px);margin-top:20px;border:8px solid var(--faixa);border-bottom:0;border-radius:32px 32px 0 0;box-shadow:0 18px 44px #120E2240}
+.site-mock.celular::before{content:"";position:absolute;z-index:2;left:50%;top:7px;width:64px;height:16px;border-radius:9px;background:var(--faixa);transform:translateX(-50%)}
+.site-mock.celular .m-topo{padding-top:30px}
 .m-corpo{height:100%;display:flex;flex-direction:column}
 .m-topo{display:flex;align-items:center;justify-content:space-between;padding:14px clamp(14px,4cqw,36px);font-size:12.5px;font-weight:500}
 .m-topo b{font-weight:640;font-size:14px}
 .m-links{display:flex;gap:16px;color:var(--apoio)}
+.m-barras{display:none;flex-direction:column;gap:3px}
+.m-barras i{display:block;width:17px;height:2px;border-radius:1px;background:var(--tinta)}
 .m-heroi{flex:1;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:20px;padding:0 clamp(14px,4cqw,36px);background:var(--faixa);color:#fff;overflow:hidden}
 .m-heroi h4{font-size:clamp(20px,4cqw,34px);font-weight:420;letter-spacing:-.025em;line-height:1.08}
 .m-heroi p{font-size:12.5px;line-height:1.4;color:#D5D1E6;margin-top:8px}
@@ -201,7 +206,8 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
 .m-fatos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:12px clamp(14px,4cqw,36px);font-size:12px}
 .m-fatos b{display:block;font-weight:620;font-size:12.5px}
 .m-fatos span{color:var(--apoio)}
-@container (max-width:460px){.m-links{display:none}.m-heroi{grid-template-columns:1fr;padding-top:18px;padding-bottom:18px;align-content:center}.m-arte{display:none}.m-fatos{grid-template-columns:1fr 1fr}.m-fatos div:last-child{display:none}}
+@container (max-width:460px){.m-links{display:none}.m-barras{display:flex}.m-heroi{grid-template-columns:1fr;gap:12px;padding-top:16px;padding-bottom:16px;align-content:center}.m-heroi h4{font-size:19px}.m-arte{order:-1;width:84px;max-height:none}.m-fatos{grid-template-columns:1fr 1fr}.m-fatos div:last-child{display:none}}
+@container (max-width:300px){.m-fatos span{display:none}.m-fatos{padding-top:10px;padding-bottom:12px}}
 
 .loja{overflow:hidden}
 .loja-topo{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-bottom:1px solid var(--linha);font-weight:640}
@@ -321,7 +327,7 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
  .fone-lugar{display:block}
  .alterna{display:none}
  .nav-url{flex:1 1 auto}
- .nav-palco{height:380px}
+ .nav-palco{height:400px}
  .painel{display:block}
  .pn-lado{display:none}
  .pn-baixo{display:block}
@@ -378,9 +384,9 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
   <div class="surge"><div class="rot"><svg viewBox="0 0 256 256" aria-hidden="true"><path class="resto" fill-rule="evenodd" d="M193.53 60.44A94 94 0 0 1 206.34 73.19A8 8 0 0 1 194.02 83.4A78 78 0 0 0 183.39 72.82A8 8 0 0 1 193.53 60.44Z M223.85 98.08A96.5 96.5 0 0 1 229.77 121.68A10.5 10.5 0 0 1 208.92 124.18A75.5 75.5 0 0 0 204.29 105.71A10.5 10.5 0 0 1 223.85 98.08Z M229.65 158.49A99 99 0 0 1 217.2 186.73A13 13 0 0 1 195.34 172.66A73 73 0 0 0 204.52 151.83A13 13 0 0 1 229.65 158.49Z M187.88 219.73A102 102 0 0 1 151.39 233.65A16 16 0 0 1 145.92 202.12A70 70 0 0 0 170.96 192.57A16 16 0 0 1 187.88 219.73Z M98.95 232.15A105 105 0 0 1 58.82 206.5A19 19 0 0 1 86.01 179.96A67 67 0 0 0 111.62 196.32A19 19 0 0 1 98.95 232.15Z M72.94 40.42A111 111 0 0 1 155.79 24.32A25 25 0 0 1 145.95 73.34A61 61 0 0 0 100.42 82.19A25 25 0 0 1 72.94 40.42Z M140.89 42.37A8 8 0 1 0 156.89 42.37A8 8 0 1 0 140.89 42.37Z"/><path class="viva" fill-rule="evenodd" d="M27.94 153.76A108 108 0 0 1 32.05 97.36A22 22 0 0 1 73.57 111.94A64 64 0 0 0 71.13 145.36A22 22 0 0 1 27.94 153.76Z"/></svg>01</div><h2>Sites</h2><p class="lead">Presença digital de alta performance, com design autoral, SEO técnico e carregamento otimizado.</p><ul class="itens"><li>Interface responsiva, do celular ao desktop</li><li>SEO técnico e Perfil da Empresa no Google</li><li>Domínio, hospedagem e SSL configurados</li><li>Ferramentas e integrações específicas do seu segmento</li></ul></div>
   <div class="cena navega surge">
     <div class="nav-barra"><i></i><i></i><i></i><span class="nav-url">suaempresa.com.br</span>
-      <div class="alterna" role="group" aria-label="Visualizar em"><button type="button" class="on" aria-pressed="true" data-l="100%">Desktop</button><button type="button" aria-pressed="false" data-l="300px">Celular</button></div></div>
+      <div class="alterna" role="group" aria-label="Visualizar em"><button type="button" class="on" aria-pressed="true" data-l="100%">Desktop</button><button type="button" aria-pressed="false" data-l="256px">Celular</button></div></div>
     <div class="nav-palco"><div class="site-mock"><div class="m-corpo">
-      <div class="m-topo"><b>Sua Empresa</b><span class="m-links"><span>Soluções</span><span>Sobre</span><span>Contato</span></span></div>
+      <div class="m-topo"><b>Sua Empresa</b><span class="m-links"><span>Soluções</span><span>Sobre</span><span>Contato</span></span><span class="m-barras" aria-hidden="true"><i></i><i></i><i></i></span></div>
       <div class="m-heroi"><div><h4>A identidade da sua empresa, em cada detalhe.</h4><p>Desenho autoral, feito para o seu segmento.</p><span class="m-botao">Solicitar orçamento</span></div><svg class="m-arte" viewBox="0 0 256 256" aria-hidden="true"><path fill="#fff" fill-rule="evenodd" d="M193.53 60.44A94 94 0 0 1 206.34 73.19A8 8 0 0 1 194.02 83.4A78 78 0 0 0 183.39 72.82A8 8 0 0 1 193.53 60.44Z M223.85 98.08A96.5 96.5 0 0 1 229.77 121.68A10.5 10.5 0 0 1 208.92 124.18A75.5 75.5 0 0 0 204.29 105.71A10.5 10.5 0 0 1 223.85 98.08Z M229.65 158.49A99 99 0 0 1 217.2 186.73A13 13 0 0 1 195.34 172.66A73 73 0 0 0 204.52 151.83A13 13 0 0 1 229.65 158.49Z M187.88 219.73A102 102 0 0 1 151.39 233.65A16 16 0 0 1 145.92 202.12A70 70 0 0 0 170.96 192.57A16 16 0 0 1 187.88 219.73Z M98.95 232.15A105 105 0 0 1 58.82 206.5A19 19 0 0 1 86.01 179.96A67 67 0 0 0 111.62 196.32A19 19 0 0 1 98.95 232.15Z M27.94 153.76A108 108 0 0 1 32.05 97.36A22 22 0 0 1 73.57 111.94A64 64 0 0 0 71.13 145.36A22 22 0 0 1 27.94 153.76Z M72.94 40.42A111 111 0 0 1 155.79 24.32A25 25 0 0 1 145.95 73.34A61 61 0 0 0 100.42 82.19A25 25 0 0 1 72.94 40.42Z M140.89 42.37A8 8 0 1 0 156.89 42.37A8 8 0 1 0 140.89 42.37Z"/></svg></div>
       <div class="m-fatos"><div><b>Design autoral</b><span>Sem templates</span></div><div><b>SEO técnico</b><span>Encontrado no Google</span></div><div><b>Alta performance</b><span>Carregamento otimizado</span></div></div>
     </div></div></div>
@@ -468,7 +474,7 @@ pecas.forEach(function(p){var s=p.getAttribute('data-s');if(s===null)return;p.ad
 
 // Sites: alterna entre computador e celular
 var mock=um('.site-mock');
-todos('.alterna button').forEach(function(b,_,lista){b.addEventListener('click',function(){lista.forEach(function(o){var on=o===b;o.classList.toggle('on',on);o.setAttribute('aria-pressed',on);});mock.style.width=b.getAttribute('data-l');});});
+todos('.alterna button').forEach(function(b,_,lista){b.addEventListener('click',function(){lista.forEach(function(o){var on=o===b;o.classList.toggle('on',on);o.setAttribute('aria-pressed',on);});mock.style.width=b.getAttribute('data-l');mock.classList.toggle('celular',b.getAttribute('data-l')!=='100%');});});
 
 // Loja: sacola e pagamento
 var qtd=1,total=189.9,nQtd=um('#sacola-n'),nTotal=um('#loja-total'),nItens=um('#loja-itens'),pagar=um('#loja-pagar'),faixa=um('.caixa-loja');
