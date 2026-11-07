@@ -133,6 +133,7 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
 @media (min-width:901px){.logo3d{width:min(37vw,66vh,600px);margin-right:0}.texto h1{font-size:clamp(36px,4.2vw,66px)}.texto>p{font-size:clamp(18px,1.55vw,23px);max-width:23em}.texto .onde{font-size:clamp(16px,1.2vw,19px);max-width:26em}.balao{width:210px}.balao p{font-size:14px}.abertura{min-height:calc(100svh - 72px + clamp(0px,854px - 100vh,70px))}.palco{padding-bottom:clamp(50px,910px - 100vh,110px)}}
 @media (prefers-reduced-motion:reduce){.balao.ver,.seta{transition:none}}
 .ver-todos{display:inline-block;margin-top:clamp(22px,2.4vw,32px);font-size:17px;font-weight:500}
+@media (max-width:520px){.lista{grid-template-columns:1fr}.lista a{padding:12px 0 13px}.lista a:nth-child(n+2){border-top:1px solid var(--linha)}.lista span{display:block;margin-top:2px;font-size:14px}.lista b{font-size:16px}}
 
 .topo{z-index:6}
 .capa{position:relative;overflow:hidden;background:var(--faixa);color:#fff}
@@ -307,8 +308,9 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
 }
 @media (max-width:900px){
  .capa #menu{color:var(--tinta)}
- .capa-corpo{min-height:0;padding-top:min(56vw,370px)}
- .capa-anel{top:64px;right:var(--margem);width:min(56vw,370px);transform:none}
+ .capa{--anel:min(62vw,44svh,360px)}
+ .capa-corpo{min-height:0;padding-top:calc(var(--anel) + 22px)}
+ .capa-anel{top:72px;left:50%;right:auto;width:var(--anel);transform:translateX(-50%)}
  .capa h1{max-width:none;font-size:clamp(38px,9.4vw,60px)}
  .capa-sub,.indice{max-width:none}
  .dupla,.dupla.inv,.titulo-largo,.titulo-fluxo,.painel-violeta{display:block}
