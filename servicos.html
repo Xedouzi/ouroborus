@@ -146,11 +146,9 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
 .indice a{display:flex;align-items:baseline;gap:12px;padding:13px 0;border-top:1px solid #ffffff2b;font-size:clamp(16px,1.25vw,19px);font-weight:500;transition:color .2s ease}
 .indice span{font-size:14px;font-weight:400;color:#B9A9FF;font-variant-numeric:tabular-nums}
 .indice a:hover,.indice a.ativa{color:#B9A9FF}
-.capa-anel{position:absolute;z-index:1;top:50%;right:-5vw;width:min(52vw,100vh,900px);height:auto;transform:translateY(-46%);overflow:visible}
-.capa-anel path{fill:#fff;transition:fill .25s ease}
+.capa-anel{position:absolute;z-index:1;top:50%;right:var(--margem);width:min(44vw,84vh,760px);height:auto;transform:translateY(-46%);overflow:visible}
+.capa-anel path{fill:#2C1F66;transition:fill .25s ease}
 .capa-anel path[data-s]{cursor:pointer}
-.capa-anel.foco path{fill:#ffffff24}
-.capa-anel.foco path.cabeca{fill:#fff}
 .capa-anel.foco path.ativa{fill:#9B85FF}
 
 .bloco{padding:clamp(64px,8vw,124px) 0;scroll-margin-top:0;overflow-x:clip}
@@ -309,8 +307,8 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
 }
 @media (max-width:900px){
  .capa #menu{color:var(--tinta)}
- .capa-corpo{min-height:0;padding-top:min(58vw,380px)}
- .capa-anel{top:64px;right:-14vw;width:min(64vw,420px);transform:none}
+ .capa-corpo{min-height:0;padding-top:min(56vw,370px)}
+ .capa-anel{top:64px;right:var(--margem);width:min(56vw,370px);transform:none}
  .capa h1{max-width:none;font-size:clamp(38px,9.4vw,60px)}
  .capa-sub,.indice{max-width:none}
  .dupla,.dupla.inv,.titulo-largo,.titulo-fluxo,.painel-violeta{display:block}
