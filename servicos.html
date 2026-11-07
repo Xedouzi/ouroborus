@@ -147,12 +147,11 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
 .indice span{font-size:14px;font-weight:400;color:#B9A9FF;font-variant-numeric:tabular-nums}
 .indice a:hover,.indice a.ativa{color:#B9A9FF}
 .capa-anel{position:absolute;z-index:1;top:50%;right:-5vw;width:min(52vw,100vh,900px);height:auto;transform:translateY(-46%);overflow:visible}
-.capa-anel path{fill:#fff;transform-box:fill-box;transition:fill .25s ease,translate .7s cubic-bezier(.16,1,.3,1);animation:peca-entra .8s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(var(--k)*70ms + 120ms)}
+.capa-anel path{fill:#fff;transition:fill .25s ease}
 .capa-anel path[data-s]{cursor:pointer}
 .capa-anel.foco path{fill:#ffffff24}
 .capa-anel.foco path.cabeca{fill:#fff}
 .capa-anel.foco path.ativa{fill:#9B85FF}
-@keyframes peca-entra{from{opacity:0;scale:.86}to{opacity:1;scale:1}}
 
 .bloco{padding:clamp(64px,8vw,124px) 0;scroll-margin-top:0;overflow-x:clip}
 .bloco.branco{background:#fff}
@@ -182,11 +181,11 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
 .cena button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
 .mini-rot{font-size:12.5px;color:var(--apoio)}
 
-.navega.sangra{margin-right:calc(-1*max(var(--margem),(100vw - var(--largura))/2));border-radius:14px 0 0 14px;overflow:hidden}
+.navega{overflow:hidden}
 .nav-barra{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid var(--linha)}
 .nav-barra i{width:10px;height:10px;border-radius:50%;background:#0A0A0C1C;flex:none}
 .nav-url{flex:0 1 240px;margin-left:8px;padding:5px 12px;border-radius:7px;background:var(--nevoa);font-size:12.5px;color:var(--apoio);white-space:nowrap;overflow:hidden}
-.alterna{display:flex;gap:2px;margin-left:auto;margin-right:clamp(0px,3vw,48px);padding:3px;border-radius:9px;background:var(--nevoa);flex:none}
+.alterna{display:flex;gap:2px;margin-left:auto;padding:3px;border-radius:9px;background:var(--nevoa);flex:none}
 .alterna button{padding:5px 11px;border-radius:7px;font-size:12.5px;font-weight:500;color:var(--apoio);transition:background .2s ease,color .2s ease}
 .alterna button.on{background:var(--acento);color:#fff}
 .nav-palco{background:#E6E3F2;height:clamp(350px,31vw,440px);overflow:hidden}
@@ -321,7 +320,7 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
  .fone{margin-left:auto;margin-right:auto;width:min(100%,284px);height:500px}
  .fone-lugar{display:block}
  .alterna{display:none}
- .nav-url{flex:1 1 auto;margin-right:var(--margem)}
+ .nav-url{flex:1 1 auto}
  .nav-palco{height:380px}
  .painel{display:block}
  .pn-lado{display:none}
@@ -346,7 +345,7 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
  .term-linhas{font-size:12.5px}
 }
 @media (prefers-reduced-motion:reduce){
- .capa-anel path,.pulso,.term-linhas li,.sacola b.pula{animation:none;transition:none}
+ .pulso,.term-linhas li,.sacola b.pula{animation:none;transition:none}
  .js .surge,.surge.visto{opacity:1;translate:0 0;transition:none}
  .site-mock,.aviso,.no,.no::after,.painel.visto .traco{transition:none}
 }
@@ -366,7 +365,7 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
     <a class="btn" href="https://wa.me/5516992793465?text=Ol%C3%A1.%20Gostaria%20de%20conversar%20sobre%20um%20projeto%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Fale conosco</a>
   </nav>
 </div></header>
-<svg class="capa-anel" viewBox="0 0 256 256" aria-hidden="true"><path style="--k:0" fill-rule="evenodd" d="M193.53 60.44A94 94 0 0 1 206.34 73.19A8 8 0 0 1 194.02 83.4A78 78 0 0 0 183.39 72.82A8 8 0 0 1 193.53 60.44Z" data-s="5"/><path style="--k:1" fill-rule="evenodd" d="M223.85 98.08A96.5 96.5 0 0 1 229.77 121.68A10.5 10.5 0 0 1 208.92 124.18A75.5 75.5 0 0 0 204.29 105.71A10.5 10.5 0 0 1 223.85 98.08Z" data-s="4"/><path style="--k:2" fill-rule="evenodd" d="M229.65 158.49A99 99 0 0 1 217.2 186.73A13 13 0 0 1 195.34 172.66A73 73 0 0 0 204.52 151.83A13 13 0 0 1 229.65 158.49Z" data-s="3"/><path style="--k:3" fill-rule="evenodd" d="M187.88 219.73A102 102 0 0 1 151.39 233.65A16 16 0 0 1 145.92 202.12A70 70 0 0 0 170.96 192.57A16 16 0 0 1 187.88 219.73Z" data-s="2"/><path style="--k:4" fill-rule="evenodd" d="M98.95 232.15A105 105 0 0 1 58.82 206.5A19 19 0 0 1 86.01 179.96A67 67 0 0 0 111.62 196.32A19 19 0 0 1 98.95 232.15Z" data-s="1"/><path style="--k:5" fill-rule="evenodd" d="M27.94 153.76A108 108 0 0 1 32.05 97.36A22 22 0 0 1 73.57 111.94A64 64 0 0 0 71.13 145.36A22 22 0 0 1 27.94 153.76Z" data-s="0"/><path style="--k:6" fill-rule="evenodd" d="M72.94 40.42A111 111 0 0 1 155.79 24.32A25 25 0 0 1 145.95 73.34A61 61 0 0 0 100.42 82.19A25 25 0 0 1 72.94 40.42Z M140.89 42.37A8 8 0 1 0 156.89 42.37A8 8 0 1 0 140.89 42.37Z" class="cabeca"/></svg>
+<svg class="capa-anel" viewBox="0 0 256 256" aria-hidden="true"><path fill-rule="evenodd" d="M193.53 60.44A94 94 0 0 1 206.34 73.19A8 8 0 0 1 194.02 83.4A78 78 0 0 0 183.39 72.82A8 8 0 0 1 193.53 60.44Z" data-s="5"/><path fill-rule="evenodd" d="M223.85 98.08A96.5 96.5 0 0 1 229.77 121.68A10.5 10.5 0 0 1 208.92 124.18A75.5 75.5 0 0 0 204.29 105.71A10.5 10.5 0 0 1 223.85 98.08Z" data-s="4"/><path fill-rule="evenodd" d="M229.65 158.49A99 99 0 0 1 217.2 186.73A13 13 0 0 1 195.34 172.66A73 73 0 0 0 204.52 151.83A13 13 0 0 1 229.65 158.49Z" data-s="3"/><path fill-rule="evenodd" d="M187.88 219.73A102 102 0 0 1 151.39 233.65A16 16 0 0 1 145.92 202.12A70 70 0 0 0 170.96 192.57A16 16 0 0 1 187.88 219.73Z" data-s="2"/><path fill-rule="evenodd" d="M98.95 232.15A105 105 0 0 1 58.82 206.5A19 19 0 0 1 86.01 179.96A67 67 0 0 0 111.62 196.32A19 19 0 0 1 98.95 232.15Z" data-s="1"/><path fill-rule="evenodd" d="M27.94 153.76A108 108 0 0 1 32.05 97.36A22 22 0 0 1 73.57 111.94A64 64 0 0 0 71.13 145.36A22 22 0 0 1 27.94 153.76Z" data-s="0"/><path fill-rule="evenodd" d="M72.94 40.42A111 111 0 0 1 155.79 24.32A25 25 0 0 1 145.95 73.34A61 61 0 0 0 100.42 82.19A25 25 0 0 1 72.94 40.42Z M140.89 42.37A8 8 0 1 0 156.89 42.37A8 8 0 1 0 140.89 42.37Z" class="cabeca"/></svg>
 <div class="caixa capa-corpo">
   <span class="capa-rot">Nossos serviços</span>
   <h1>Engenharia digital sob medida para a sua operação</h1>
@@ -377,7 +376,7 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
 <main>
 <section class="bloco" id="sites"><div class="caixa dupla">
   <div class="surge"><div class="rot"><svg viewBox="0 0 256 256" aria-hidden="true"><path class="resto" fill-rule="evenodd" d="M193.53 60.44A94 94 0 0 1 206.34 73.19A8 8 0 0 1 194.02 83.4A78 78 0 0 0 183.39 72.82A8 8 0 0 1 193.53 60.44Z M223.85 98.08A96.5 96.5 0 0 1 229.77 121.68A10.5 10.5 0 0 1 208.92 124.18A75.5 75.5 0 0 0 204.29 105.71A10.5 10.5 0 0 1 223.85 98.08Z M229.65 158.49A99 99 0 0 1 217.2 186.73A13 13 0 0 1 195.34 172.66A73 73 0 0 0 204.52 151.83A13 13 0 0 1 229.65 158.49Z M187.88 219.73A102 102 0 0 1 151.39 233.65A16 16 0 0 1 145.92 202.12A70 70 0 0 0 170.96 192.57A16 16 0 0 1 187.88 219.73Z M98.95 232.15A105 105 0 0 1 58.82 206.5A19 19 0 0 1 86.01 179.96A67 67 0 0 0 111.62 196.32A19 19 0 0 1 98.95 232.15Z M72.94 40.42A111 111 0 0 1 155.79 24.32A25 25 0 0 1 145.95 73.34A61 61 0 0 0 100.42 82.19A25 25 0 0 1 72.94 40.42Z M140.89 42.37A8 8 0 1 0 156.89 42.37A8 8 0 1 0 140.89 42.37Z"/><path class="viva" fill-rule="evenodd" d="M27.94 153.76A108 108 0 0 1 32.05 97.36A22 22 0 0 1 73.57 111.94A64 64 0 0 0 71.13 145.36A22 22 0 0 1 27.94 153.76Z"/></svg>01</div><h2>Sites</h2><p class="lead">Presença digital de alta performance, com design autoral, SEO técnico e carregamento otimizado.</p><ul class="itens"><li>Interface responsiva, do celular ao desktop</li><li>SEO técnico e Perfil da Empresa no Google</li><li>Domínio, hospedagem e SSL configurados</li><li>Ferramentas e integrações específicas do seu segmento</li></ul></div>
-  <div class="cena navega sangra surge">
+  <div class="cena navega surge">
     <div class="nav-barra"><i></i><i></i><i></i><span class="nav-url">suaempresa.com.br</span>
       <div class="alterna" role="group" aria-label="Visualizar em"><button type="button" class="on" aria-pressed="true" data-l="100%">Desktop</button><button type="button" aria-pressed="false" data-l="300px">Celular</button></div></div>
     <div class="nav-palco"><div class="site-mock"><div class="m-corpo">
@@ -461,17 +460,11 @@ function aoVer(el,fn,lim){if(!('IntersectionObserver' in window)){fn(true);retur
 todos('.surge').forEach(function(el){var ja=false;aoVer(el,function(v){if(v&&!ja){ja=true;el.classList.add('visto');}},.1);});
 var pn=um('.painel');if(pn){var jaP=false;aoVer(pn,function(v){if(v&&!jaP){jaP=true;pn.classList.add('visto');}},.2);}
 
-// Anel da abertura: reage ao mouse e acende a peça de cada serviço
-var anel=um('.capa-anel'),capa=um('.capa'),pecas=todos('path',anel),links=todos('.indice a');
+// Anel da abertura: acende a peça de cada serviço
+var anel=um('.capa-anel'),pecas=todos('path',anel),links=todos('.indice a');
 function foco(s){anel.classList.toggle('foco',s!==null);pecas.forEach(function(p){p.classList.toggle('ativa',p.getAttribute('data-s')===s);});links.forEach(function(a){a.classList.toggle('ativa',a.getAttribute('data-s')===s);});}
 links.forEach(function(a){var s=a.getAttribute('data-s');a.addEventListener('pointerenter',function(){foco(s);});a.addEventListener('pointerleave',function(){foco(null);});a.addEventListener('focus',function(){foco(s);});a.addEventListener('blur',function(){foco(null);});});
 pecas.forEach(function(p){var s=p.getAttribute('data-s');if(s===null)return;p.addEventListener('pointerenter',function(){foco(s);});p.addEventListener('pointerleave',function(){foco(null);});p.addEventListener('click',function(){location.hash=links[+s].getAttribute('href').slice(1);});});
-if(!calmo&&matchMedia('(pointer:fine)').matches){
- var dados=pecas.map(function(p){var b=p.getBBox(),x=b.x+b.width/2-128,y=b.y+b.height/2-128,d=Math.hypot(x,y)||1;return {p:p,x:x/d,y:y/d};});
- capa.addEventListener('pointermove',function(e){var r=anel.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2,dx=(e.clientX-cx)/r.width,dy=(e.clientY-cy)/r.height,perto=Math.max(0,1-Math.hypot(dx,dy)/.85),abre=perto*perto*13;
-  dados.forEach(function(d,i){var par=2+i*.7;d.p.style.translate=(d.x*abre+dx*par*5).toFixed(1)+'px '+(d.y*abre+dy*par*5).toFixed(1)+'px';});});
- capa.addEventListener('pointerleave',function(){dados.forEach(function(d){d.p.style.translate='0px 0px';});});
-}
 
 // Sites: alterna entre computador e celular
 var mock=um('.site-mock');
