@@ -314,7 +314,15 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
 .js .duvidas-grade .surge:nth-child(2){transition-delay:.1s}
 @media (max-width:900px){.duvidas-grade{display:block}.duvidas{margin-top:24px}.duvidas p{padding-right:0}}
 @media (prefers-reduced-motion:reduce){.duvidas summary::after,.duvidas details::details-content{transition:none}.js .duvidas.surge details{opacity:1!important;translate:0 0!important;transition:none!important}}
-@media (max-width:900px){.texto .acoes{max-width:360px}.texto .acoes .sub{margin:10px auto 0}}
+@media (max-width:640px){.texto .acoes{max-width:360px}.texto .acoes .sub{margin:10px auto 0}}
+@media (min-width:641px) and (max-width:900px){
+ .abertura{min-height:min(calc(100svh - 72px),640px)}
+ .palco{grid-template-columns:minmax(0,1fr) auto;justify-items:stretch;gap:clamp(16px,3vw,32px);padding-top:clamp(8px,2vh,24px)}
+ .logo3d{order:0;width:min(36vw,48vh,320px)}
+ .texto{max-width:none}
+ .texto>p{max-width:24em}
+ .acoes .btn{flex:0 0 auto;max-width:none}
+}
 @media (min-width:901px){
  .como-lado{align-self:stretch;position:relative}
  .como-anel{position:absolute;left:0;top:50%;width:min(100%,430px,54vh);margin:0;translate:0 -50%}
@@ -580,6 +588,7 @@ mn.addEventListener('click',function(e){if(e.target.closest('a'))menu(false);});
 document.addEventListener('click',function(e){if(!e.target.closest('.topo'))menu(false);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mn.classList.contains('aberto'))menu(false,true);});
 addEventListener('resize',function(){if(innerWidth>900)menu(false);});
+document.addEventListener('click',function(e){var el=e.target.closest&&e.target.closest('a,button,summary');if(el&&e.detail>0&&el!==bt)el.blur();});
 var abertura=document.getElementById('inicio'),caixa=document.getElementById('logo3d'),canvas=document.getElementById('cena'),zap=document.getElementById('zap');
 requestAnimationFrame(function(){document.body.classList.add('pronto');});
 if('IntersectionObserver' in window){var ve={},oz=new IntersectionObserver(function(l){l.forEach(function(e){ve[e.target.id]=e.isIntersecting;});zap.classList.toggle('ver',!ve.inicio&&!ve.contato);});oz.observe(abertura);oz.observe(document.getElementById('contato'));}else{zap.classList.add('ver');}
@@ -622,7 +631,7 @@ var W,H,dpr,S,cx,cy,RAIO,COMP,tx,ty,nP,sB,sF,chaves,banda,xEsq,celular;
 function monta(){
  var rc=canvas.getBoundingClientRect(),rb=caixa.getBoundingClientRect(),rl=document.querySelector('.lista').getBoundingClientRect();
  dpr=Math.min(Math.max(window.devicePixelRatio||1,1.25),2);W=rc.width;H=rc.height;var cw=Math.round(W*dpr),ch=Math.round(H*dpr);if(canvas.width!==cw||canvas.height!==ch){canvas.width=cw;canvas.height=ch;}gl.viewport(0,0,canvas.width,canvas.height);
- cx=rb.left+rb.width/2-rc.left-W/2;cy=H/2-(rb.top+rb.height/2-rc.top);S=(rb.width*.8)/222;RAIO=86*S;COMP=COMP_U*S;xEsq=-W/2;celular=W<=900;banda=celular?W*.42:Math.min(W*.27,400);
+ cx=rb.left+rb.width/2-rc.left-W/2;cy=H/2-(rb.top+rb.height/2-rc.top);S=(rb.width*.8)/222;RAIO=86*S;COMP=COMP_U*S;xEsq=-W/2;celular=W<=640;banda=celular?W*.42:Math.min(W*.27,400);
  var y0=celular?cy-RAIO*1.5:H/2-(rl.top-rc.top)+Math.max(36,44*S),xs=[],ys=[];
  var thE=255*Math.PI/180,thC=396*Math.PI/180;
  function rs(th){var q=Math.max(0,(thC-th)/(thC-thE));return RAIO*(1+.72*q*q*(3-2*q));}
