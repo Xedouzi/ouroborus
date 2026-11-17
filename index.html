@@ -294,6 +294,17 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
 
 .js .surge{opacity:0;translate:0 22px}
 .surge.visto{opacity:1!important;translate:0 0!important;transition:opacity .7s ease,translate .7s cubic-bezier(.16,1,.3,1)}
+.js .cena.surge,.js .fone-lugar.surge,.js .fluxo.surge{translate:0 46px;scale:.96}
+.surge.visto{scale:1!important;transition:opacity .8s ease,translate .9s cubic-bezier(.16,1,.3,1),scale .9s cubic-bezier(.16,1,.3,1)}
+.js .surge .itens li,.js .itens.surge li,.js .etapas.surge li,.js .fluxo.surge .no{opacity:0;translate:0 14px}
+.surge.visto .itens li,.itens.surge.visto li,.etapas.surge.visto li{opacity:1;translate:0 0;transition:opacity .6s ease calc(.2s + var(--i,0)*80ms),translate .7s cubic-bezier(.16,1,.3,1) calc(.2s + var(--i,0)*80ms)}
+.fluxo.surge.visto .no{opacity:1;translate:0 0;transition:opacity .6s ease calc(.25s + var(--i,0)*90ms),translate .7s cubic-bezier(.16,1,.3,1) calc(.25s + var(--i,0)*90ms),background .3s ease,border-color .3s ease,scale .3s ease}
+.js .surge .rot .viva{opacity:0;scale:.4;transform-box:fill-box;transform-origin:center}
+.surge.visto .rot .viva{opacity:1;scale:1;transition:opacity .4s ease .35s,scale .8s cubic-bezier(.34,1.56,.64,1) .35s}
+.acoes .sub,.acoes .tel{position:relative}.acoes .sub::after,.acoes .tel::after{content:"";position:absolute;left:-6px;right:-6px;top:-13px;bottom:-13px}
+.js #contato .surge:nth-child(2){transition-delay:.1s}
+.js #contato .surge:nth-child(3){transition-delay:.2s}
+.js .como .surge:nth-child(2){transition-delay:.1s}
 .js .dupla .surge:nth-child(2),.js .titulo-largo .surge:nth-child(2){transition-delay:.08s}
 
 @media (min-width:901px){
@@ -341,6 +352,7 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
 @media (prefers-reduced-motion:reduce){
  .pulso,.term-linhas li,.sacola b.pula{animation:none;transition:none}
  .js .surge,.surge.visto{opacity:1;translate:0 0;transition:none}
+ .js .surge,.js .surge .itens li,.js .surge li,.js .surge .no,.js .surge .rot .viva{opacity:1!important;translate:0 0!important;scale:1!important;transition:none!important}
  .site-mock,.aviso,.no,.no::after,.painel.visto .traco{transition:none}
 }
 </style>
@@ -435,12 +447,12 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
 </div></section>
 </div>
 <section class="faixa" id="como"><div class="caixa como">
-  <div class="como-lado">
+  <div class="como-lado surge">
     <h2>O trabalho continua depois da entrega</h2>
   <p class="intro">Um projeto digital precisa de cuidado constante para continuar útil. Por isso, a publicação é apenas uma das etapas do nosso trabalho.</p>
     <svg class="como-anel" viewBox="0 0 256 256" aria-hidden="true"><path data-etapa="6" fill-rule="evenodd" d="M193.53 60.44A94 94 0 0 1 206.34 73.19A8 8 0 0 1 194.02 83.4A78 78 0 0 0 183.39 72.82A8 8 0 0 1 193.53 60.44Z"/><path data-etapa="5" fill-rule="evenodd" d="M223.85 98.08A96.5 96.5 0 0 1 229.77 121.68A10.5 10.5 0 0 1 208.92 124.18A75.5 75.5 0 0 0 204.29 105.71A10.5 10.5 0 0 1 223.85 98.08Z"/><path data-etapa="4" fill-rule="evenodd" d="M229.65 158.49A99 99 0 0 1 217.2 186.73A13 13 0 0 1 195.34 172.66A73 73 0 0 0 204.52 151.83A13 13 0 0 1 229.65 158.49Z"/><path data-etapa="3" fill-rule="evenodd" d="M187.88 219.73A102 102 0 0 1 151.39 233.65A16 16 0 0 1 145.92 202.12A70 70 0 0 0 170.96 192.57A16 16 0 0 1 187.88 219.73Z"/><path data-etapa="2" fill-rule="evenodd" d="M98.95 232.15A105 105 0 0 1 58.82 206.5A19 19 0 0 1 86.01 179.96A67 67 0 0 0 111.62 196.32A19 19 0 0 1 98.95 232.15Z"/><path data-etapa="1" fill-rule="evenodd" d="M27.94 153.76A108 108 0 0 1 32.05 97.36A22 22 0 0 1 73.57 111.94A64 64 0 0 0 71.13 145.36A22 22 0 0 1 27.94 153.76Z"/><path data-etapa="0" fill-rule="evenodd" d="M72.94 40.42A111 111 0 0 1 155.79 24.32A25 25 0 0 1 145.95 73.34A61 61 0 0 0 100.42 82.19A25 25 0 0 1 72.94 40.42Z M140.89 42.37A8 8 0 1 0 156.89 42.37A8 8 0 1 0 140.89 42.37Z"/></svg>
   </div>
-  <ol class="etapas">
+  <ol class="etapas surge">
     <li><svg class="mini" viewBox="0 0 256 256" aria-hidden="true"><path class="resto" fill-rule="evenodd" d="M193.53 60.44A94 94 0 0 1 206.34 73.19A8 8 0 0 1 194.02 83.4A78 78 0 0 0 183.39 72.82A8 8 0 0 1 193.53 60.44Z M223.85 98.08A96.5 96.5 0 0 1 229.77 121.68A10.5 10.5 0 0 1 208.92 124.18A75.5 75.5 0 0 0 204.29 105.71A10.5 10.5 0 0 1 223.85 98.08Z M229.65 158.49A99 99 0 0 1 217.2 186.73A13 13 0 0 1 195.34 172.66A73 73 0 0 0 204.52 151.83A13 13 0 0 1 229.65 158.49Z M187.88 219.73A102 102 0 0 1 151.39 233.65A16 16 0 0 1 145.92 202.12A70 70 0 0 0 170.96 192.57A16 16 0 0 1 187.88 219.73Z M98.95 232.15A105 105 0 0 1 58.82 206.5A19 19 0 0 1 86.01 179.96A67 67 0 0 0 111.62 196.32A19 19 0 0 1 98.95 232.15Z M27.94 153.76A108 108 0 0 1 32.05 97.36A22 22 0 0 1 73.57 111.94A64 64 0 0 0 71.13 145.36A22 22 0 0 1 27.94 153.76Z"/><path fill-rule="evenodd" d="M72.94 40.42A111 111 0 0 1 155.79 24.32A25 25 0 0 1 145.95 73.34A61 61 0 0 0 100.42 82.19A25 25 0 0 1 72.94 40.42Z M140.89 42.37A8 8 0 1 0 156.89 42.37A8 8 0 1 0 140.89 42.37Z"/></svg><span class="num" aria-hidden="true">1</span><div><h3>Primeiro atendimento</h3><p>Conhecemos o negócio, o público e o que o projeto precisa resolver.</p></div></li>
     <li><svg class="mini" viewBox="0 0 256 256" aria-hidden="true"><path class="resto" fill-rule="evenodd" d="M193.53 60.44A94 94 0 0 1 206.34 73.19A8 8 0 0 1 194.02 83.4A78 78 0 0 0 183.39 72.82A8 8 0 0 1 193.53 60.44Z M223.85 98.08A96.5 96.5 0 0 1 229.77 121.68A10.5 10.5 0 0 1 208.92 124.18A75.5 75.5 0 0 0 204.29 105.71A10.5 10.5 0 0 1 223.85 98.08Z M229.65 158.49A99 99 0 0 1 217.2 186.73A13 13 0 0 1 195.34 172.66A73 73 0 0 0 204.52 151.83A13 13 0 0 1 229.65 158.49Z M187.88 219.73A102 102 0 0 1 151.39 233.65A16 16 0 0 1 145.92 202.12A70 70 0 0 0 170.96 192.57A16 16 0 0 1 187.88 219.73Z M98.95 232.15A105 105 0 0 1 58.82 206.5A19 19 0 0 1 86.01 179.96A67 67 0 0 0 111.62 196.32A19 19 0 0 1 98.95 232.15Z M72.94 40.42A111 111 0 0 1 155.79 24.32A25 25 0 0 1 145.95 73.34A61 61 0 0 0 100.42 82.19A25 25 0 0 1 72.94 40.42Z M140.89 42.37A8 8 0 1 0 156.89 42.37A8 8 0 1 0 140.89 42.37Z"/><path fill-rule="evenodd" d="M27.94 153.76A108 108 0 0 1 32.05 97.36A22 22 0 0 1 73.57 111.94A64 64 0 0 0 71.13 145.36A22 22 0 0 1 27.94 153.76Z"/></svg><span class="num" aria-hidden="true">2</span><div><h3>Proposta</h3><p>Apresentamos o escopo, o prazo e o investimento do projeto.</p></div></li>
     <li><svg class="mini" viewBox="0 0 256 256" aria-hidden="true"><path class="resto" fill-rule="evenodd" d="M193.53 60.44A94 94 0 0 1 206.34 73.19A8 8 0 0 1 194.02 83.4A78 78 0 0 0 183.39 72.82A8 8 0 0 1 193.53 60.44Z M223.85 98.08A96.5 96.5 0 0 1 229.77 121.68A10.5 10.5 0 0 1 208.92 124.18A75.5 75.5 0 0 0 204.29 105.71A10.5 10.5 0 0 1 223.85 98.08Z M229.65 158.49A99 99 0 0 1 217.2 186.73A13 13 0 0 1 195.34 172.66A73 73 0 0 0 204.52 151.83A13 13 0 0 1 229.65 158.49Z M187.88 219.73A102 102 0 0 1 151.39 233.65A16 16 0 0 1 145.92 202.12A70 70 0 0 0 170.96 192.57A16 16 0 0 1 187.88 219.73Z M27.94 153.76A108 108 0 0 1 32.05 97.36A22 22 0 0 1 73.57 111.94A64 64 0 0 0 71.13 145.36A22 22 0 0 1 27.94 153.76Z M72.94 40.42A111 111 0 0 1 155.79 24.32A25 25 0 0 1 145.95 73.34A61 61 0 0 0 100.42 82.19A25 25 0 0 1 72.94 40.42Z M140.89 42.37A8 8 0 1 0 156.89 42.37A8 8 0 1 0 140.89 42.37Z"/><path fill-rule="evenodd" d="M98.95 232.15A105 105 0 0 1 58.82 206.5A19 19 0 0 1 86.01 179.96A67 67 0 0 0 111.62 196.32A19 19 0 0 1 98.95 232.15Z"/></svg><span class="num" aria-hidden="true">3</span><div><h3>Conteúdo</h3><p>Reunimos os textos, as imagens e as informações do projeto.</p></div></li>
@@ -452,9 +464,9 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
 </div></section>
 
 <section class="faixa" id="contato"><div class="caixa">
-  <h2>Conte-nos sobre o seu negócio.</h2>
-  <p class="intro">Respondemos pelo WhatsApp. Estamos em Cravinhos, SP, com atendimento remoto para todo o Brasil.</p>
-  <div class="acoes"><a class="btn" href="https://wa.me/5516992793465?text=Ol%C3%A1.%20Gostaria%20de%20conversar%20sobre%20um%20projeto%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Falar no WhatsApp</a><a class="tel" href="tel:+5516992793465">(16) 99279-3465</a></div>
+  <h2 class="surge">Conte-nos sobre o seu negócio.</h2>
+  <p class="intro surge">Respondemos pelo WhatsApp. Estamos em Cravinhos, SP, com atendimento remoto para todo o Brasil.</p>
+  <div class="acoes surge"><a class="btn" href="https://wa.me/5516992793465?text=Ol%C3%A1.%20Gostaria%20de%20conversar%20sobre%20um%20projeto%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Falar no WhatsApp</a><a class="tel" href="tel:+5516992793465">(16) 99279-3465</a></div>
 </div></section>
 <footer class="rodape"><div class="caixa"><span>Ouroborus Technology</span><span>Cravinhos, SP</span></div></footer>
 <a class="zap" id="zap" href="https://wa.me/5516992793465?text=Ol%C3%A1.%20Gostaria%20de%20conversar%20sobre%20um%20projeto%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg viewBox="0 0 24 24" width="30" height="30" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
@@ -465,7 +477,9 @@ function um(s,r){return (r||document).querySelector(s);}
 function todos(s,r){return [].slice.call((r||document).querySelectorAll(s));}
 function aoVer(el,fn,lim){if(!('IntersectionObserver' in window)){fn(true);return;}new IntersectionObserver(function(l){fn(l[0].isIntersecting);},{threshold:lim||.3}).observe(el);}
 todos('.surge').forEach(function(el){var ja=false;aoVer(el,function(v){if(v&&!ja){ja=true;el.classList.add('visto');}},.1);});
-var pn=um('.painel');if(pn){var jaP=false;aoVer(pn,function(v){if(v&&!jaP){jaP=true;pn.classList.add('visto');}},.2);}
+todos('.itens,.etapas,.fluxo-linha').forEach(function(l){[].forEach.call(l.children,function(li,i){li.style.setProperty('--i',i);});});
+function conta(b){var m=b.textContent.match(/^(\D*)([\d,]+)(\D*)$/);if(!m||calmo)return;var fim=parseFloat(m[2].replace(',','.')),dec=(m[2].split(',')[1]||'').length,t0=null;(function q(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1300),e=1-Math.pow(1-k,3);b.textContent=m[1]+(fim*e).toFixed(dec).replace('.',',')+m[3];if(k<1)requestAnimationFrame(q);})(performance.now());}
+var pn=um('.painel');if(pn){var jaP=false;aoVer(pn,function(v){if(v&&!jaP){jaP=true;pn.classList.add('visto');todos('.pn-kpis b',pn).forEach(conta);}},.2);}
 
 // Sites: alterna entre computador e celular
 var mock=um('.site-mock');
@@ -497,7 +511,7 @@ function roda(){if(rodando)return;rodando=true;botao.disabled=true;estado.textCo
  var i=0;(function passo(){if(i>0){nos[i-1].classList.remove('ativo');nos[i-1].classList.add('feito');}if(i===nos.length){fim();return;}nos[i].classList.add('ativo');i++;setTimeout(passo,620);})();}
 function fim(){rodando=false;botao.disabled=false;estado.textContent='Workflow concluído, sem intervenção manual.';}
 botao.addEventListener('click',roda);
-var jaF=false;aoVer(um('.fluxo'),function(v){if(v&&!jaF){jaF=true;setTimeout(roda,350);}},.4);
+var jaF=false;aoVer(um('.fluxo'),function(v){if(v&&!jaF){jaF=true;setTimeout(roda,1200);}},.4);
 
 // Manutenção: registro de atividades
 var lista=um('.term-linhas'),base=['backup diário concluído','certificado SSL válido','dependências atualizadas','testes automatizados aprovados','nova versão publicada','monitoramento sem alertas'],n=0,tT;
