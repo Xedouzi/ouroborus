@@ -13,6 +13,7 @@
 <meta property="og:url" content="https://ouroborus.com.br/">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Ouroborus Technology", "url": "https://ouroborus.com.br/", "description": "Sites, lojas virtuais, aplicativos, sistemas sob medida e automações para empresas.", "telephone": "+55-16-99279-3465", "address": {"@type": "PostalAddress", "addressLocality": "Cravinhos", "addressRegion": "SP", "addressCountry": "BR"}, "areaServed": "BR"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Ouroborus Technology", "alternateName": "Ouroborus", "url": "https://ouroborus.com.br/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quanto custa um projeto?", "acceptedAnswer": {"@type": "Answer", "text": "O investimento depende do escopo de cada projeto. Após o primeiro atendimento, apresentamos uma proposta sem compromisso, com o escopo, o prazo e o investimento definidos."}}, {"@type": "Question", "name": "Qual é o prazo de entrega?", "acceptedAnswer": {"@type": "Answer", "text": "O prazo é definido na proposta, conforme a complexidade do projeto. Durante o desenvolvimento, apresentamos cada etapa para a sua aprovação."}}, {"@type": "Question", "name": "O domínio fica em nome de quem?", "acceptedAnswer": {"@type": "Answer", "text": "O domínio é registrado no CNPJ ou no CPF do cliente. O endereço do site pertence à sua empresa desde o primeiro dia."}}, {"@type": "Question", "name": "Existe mensalidade?", "acceptedAnswer": {"@type": "Answer", "text": "Oferecemos um plano mensal que mantém o projeto no ar e atualizado, com hospedagem, segurança, backups, correções e suporte. As condições constam na proposta."}}, {"@type": "Question", "name": "Preciso ter os textos e as fotos prontos?", "acceptedAnswer": {"@type": "Answer", "text": "Não é necessário. Na etapa de conteúdo, reunimos com você as informações e as imagens disponíveis e redigimos os textos do projeto."}}, {"@type": "Question", "name": "Posso solicitar alterações depois da entrega?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Durante o desenvolvimento, os ajustes são feitos até a sua aprovação. Após a publicação, as alterações são atendidas pelo plano mensal ou orçadas à parte."}}, {"@type": "Question", "name": "Em qual plataforma a loja virtual é montada?", "acceptedAnswer": {"@type": "Answer", "text": "Trabalhamos com a Nuvemshop, plataforma brasileira com Pix, cartão e cálculo de frete. O plano da plataforma é contratado em nome da loja, e nós cuidamos da montagem e da manutenção."}}, {"@type": "Question", "name": "Vocês atendem empresas fora de Cravinhos?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Atendemos remotamente empresas de todo o Brasil pelo WhatsApp. Em Cravinhos e região, também realizamos reuniões presenciais."}}]}</script>
 <meta name="color-scheme" content="only light">
 <meta name="darkreader-lock">
 <title>Ouroborus Technology | Sites, aplicativos, sistemas e automações</title>
@@ -291,6 +292,26 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
 .term-linhas time{color:#B59498;flex:none}
 .term-linhas b{font-weight:400;color:#7EE2AB;flex:none}
 @keyframes linha{from{opacity:0;translate:0 6px}}
+#perguntas{background:#fff;scroll-margin-top:0}
+.duvidas-grade{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,6vw,96px);align-items:start}
+.duvidas details{border-top:1px solid var(--linha)}
+.duvidas details:last-child{border-bottom:1px solid var(--linha)}
+.duvidas summary{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:64px;padding:16px 0;font-size:clamp(17px,1.4vw,20px);font-weight:520;letter-spacing:-.01em;line-height:1.3;cursor:pointer;list-style:none;-webkit-tap-highlight-color:transparent}
+.duvidas summary::-webkit-details-marker{display:none}
+.duvidas summary:focus{outline:none}
+.duvidas summary:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.duvidas summary::after{content:"";flex:none;width:14px;height:14px;background:linear-gradient(var(--acento),var(--acento)) center/100% 2px no-repeat,linear-gradient(var(--acento),var(--acento)) center/2px 100% no-repeat;transition:rotate .3s cubic-bezier(.16,1,.3,1)}
+.duvidas details[open] summary::after{rotate:135deg}
+.duvidas summary:hover{color:var(--acento)}
+.duvidas p{padding:0 40px 20px 0;font-size:clamp(16px,1.2vw,17.5px);line-height:1.5;color:var(--apoio);max-width:40em}
+:root{interpolate-size:allow-keywords}
+.duvidas details::details-content{block-size:0;overflow:hidden;transition:block-size .35s cubic-bezier(.16,1,.3,1),content-visibility .35s allow-discrete}
+.duvidas details[open]::details-content{block-size:auto}
+.js .duvidas.surge details{opacity:0;translate:0 14px}
+.duvidas.surge.visto details{opacity:1;translate:0 0;transition:opacity .6s ease calc(.15s + var(--i,0)*60ms),translate .7s cubic-bezier(.16,1,.3,1) calc(.15s + var(--i,0)*60ms)}
+.js .duvidas-grade .surge:nth-child(2){transition-delay:.1s}
+@media (max-width:900px){.duvidas-grade{display:block}.duvidas{margin-top:24px}.duvidas p{padding-right:0}}
+@media (prefers-reduced-motion:reduce){.duvidas summary::after,.duvidas details::details-content{transition:none}.js .duvidas.surge details{opacity:1!important;translate:0 0!important;transition:none!important}}
 @media (max-width:900px){.texto .acoes{max-width:360px}.texto .acoes .sub{margin:10px auto 0}}
 @media (min-width:901px){
  .como-lado{align-self:stretch;position:relative}
@@ -477,6 +498,20 @@ h1{font-size:clamp(33px,4.1vw,62px);line-height:1.08;font-weight:500;letter-spac
   </ol>
 </div></section>
 
+<section class="faixa" id="perguntas"><div class="caixa duvidas-grade">
+  <div class="surge"><h2>Perguntas frequentes</h2>
+  <p class="intro">As dúvidas mais comuns de quem está começando um projeto conosco.</p></div>
+  <div class="duvidas surge">
+    <details><summary>Quanto custa um projeto?</summary><p>O investimento depende do escopo de cada projeto. Após o primeiro atendimento, apresentamos uma proposta sem compromisso, com o escopo, o prazo e o investimento definidos.</p></details>
+    <details><summary>Qual é o prazo de entrega?</summary><p>O prazo é definido na proposta, conforme a complexidade do projeto. Durante o desenvolvimento, apresentamos cada etapa para a sua aprovação.</p></details>
+    <details><summary>O domínio fica em nome de quem?</summary><p>O domínio é registrado no CNPJ ou no CPF do cliente. O endereço do site pertence à sua empresa desde o primeiro dia.</p></details>
+    <details><summary>Existe mensalidade?</summary><p>Oferecemos um plano mensal que mantém o projeto no ar e atualizado, com hospedagem, segurança, backups, correções e suporte. As condições constam na proposta.</p></details>
+    <details><summary>Preciso ter os textos e as fotos prontos?</summary><p>Não é necessário. Na etapa de conteúdo, reunimos com você as informações e as imagens disponíveis e redigimos os textos do projeto.</p></details>
+    <details><summary>Posso solicitar alterações depois da entrega?</summary><p>Sim. Durante o desenvolvimento, os ajustes são feitos até a sua aprovação. Após a publicação, as alterações são atendidas pelo plano mensal ou orçadas à parte.</p></details>
+    <details><summary>Em qual plataforma a loja virtual é montada?</summary><p>Trabalhamos com a Nuvemshop, plataforma brasileira com Pix, cartão e cálculo de frete. O plano da plataforma é contratado em nome da loja, e nós cuidamos da montagem e da manutenção.</p></details>
+    <details><summary>Vocês atendem empresas fora de Cravinhos?</summary><p>Sim. Atendemos remotamente empresas de todo o Brasil pelo WhatsApp. Em Cravinhos e região, também realizamos reuniões presenciais.</p></details>
+  </div>
+</div></section>
 <section class="faixa" id="contato"><div class="caixa">
   <h2 class="surge">Conte-nos sobre o seu negócio.</h2>
   <p class="intro surge">Respondemos pelo WhatsApp. Estamos em Cravinhos, SP, com atendimento remoto para todo o Brasil.</p>
@@ -491,7 +526,7 @@ function um(s,r){return (r||document).querySelector(s);}
 function todos(s,r){return [].slice.call((r||document).querySelectorAll(s));}
 function aoVer(el,fn,lim){if(!('IntersectionObserver' in window)){fn(true);return;}new IntersectionObserver(function(l){fn(l[0].isIntersecting);},{threshold:lim||.3}).observe(el);}
 todos('.surge').forEach(function(el){var ja=false;aoVer(el,function(v){if(v&&!ja){ja=true;el.classList.add('visto');}},.1);});
-todos('.itens,.etapas,.fluxo-linha').forEach(function(l){[].forEach.call(l.children,function(li,i){li.style.setProperty('--i',i);});});
+todos('.itens,.etapas,.fluxo-linha,.duvidas').forEach(function(l){[].forEach.call(l.children,function(li,i){li.style.setProperty('--i',i);});});
 function conta(b){var m=b.textContent.match(/^(\D*)([\d,]+)(\D*)$/);if(!m||calmo)return;var fim=parseFloat(m[2].replace(',','.')),dec=(m[2].split(',')[1]||'').length,t0=null;(function q(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1300),e=1-Math.pow(1-k,3);b.textContent=m[1]+(fim*e).toFixed(dec).replace('.',',')+m[3];if(k<1)requestAnimationFrame(q);})(performance.now());}
 var pn=um('.painel');if(pn){var jaP=false;aoVer(pn,function(v){if(v&&!jaP){jaP=true;pn.classList.add('visto');todos('.pn-kpis b',pn).forEach(conta);}},.2);}
 
